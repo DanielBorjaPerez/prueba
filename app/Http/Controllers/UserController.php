@@ -38,4 +38,10 @@ class UserController extends Controller
         return "home";
 
     }
+
+    public function alv(){
+
+        return "alv";
+
+    }
 }
