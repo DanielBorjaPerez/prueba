@@ -14,11 +14,19 @@
             <ul>
                 @foreach ($users as $user)
                     <li>
-                        {{ $user->name }},({{$user->email}})
+                        {{ $user->name }} ⮕
                         <a href="{{ route('users.show',['id' => $user->id]) }}">ver detalles </a>
 
                     </li>
                 @endforeach
+
+                <br></br>
+
+                <form method="get" action="{{url ('usuarios/crear')}}">
+
+                {!! csrf_field() !!}
+                <button type="submit">Crear usuario</button>
+        </form>
             </ul>
         @else
         <p>No hay usuarios registrados</p>

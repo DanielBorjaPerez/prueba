@@ -13,7 +13,10 @@
         <p> Correo del usuario: {{$user->email}}</p>
 
         <p>
-            <a href="{{route('users')}}">regresar </a>
+
+            <a href="{{route('edit', $user)}}">editar usuario </a><br></br>
+            <a href="{{route('users')}}">regresar a la lista de usuarios </a>
+            
         </p>
 
     </body>

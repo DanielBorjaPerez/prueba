@@ -20,6 +20,8 @@ Route::get('/usuarios/{id}','UserController@show')
         ->where('id', '[0-9]+')
         ->name('users.show');
 
-Route::get('/usuarios/nuevo','UserController@create')->name('users.create');
-
+Route::get('/usuarios/crear','UserController@create')->name('crear');
+Route::post('/usuarios/registrar','UserController@store');
 Route::get('/saludo/{name}/{nickname?}','WelcomeUserController@index');
+Route::get('/usuarios/{user}/editar','UserController@edit')->name('edit');
+Route::post('/usuarios/{id}','UserController@modify')->name('modificar');
