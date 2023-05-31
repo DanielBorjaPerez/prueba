@@ -25,3 +25,4 @@ Route::post('/usuarios/registrar','UserController@store');
 Route::get('/saludo/{name}/{nickname?}','WelcomeUserController@index');
 Route::get('/usuarios/{user}/editar','UserController@edit')->name('edit');
 Route::post('/usuarios/{id}','UserController@modify')->name('modificar');
+Route::get('/usuarios/{user}/borrar','UserController@destroy')->name('destroy');

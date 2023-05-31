@@ -15,6 +15,7 @@
         <p>
 
             <a href="{{route('edit', $user)}}">editar usuario </a><br></br>
+            <a href="{{route('destroy', $user)}}">borrar usuario </a><br></br>
             <a href="{{route('users')}}">regresar a la lista de usuarios </a>
             
         </p>
